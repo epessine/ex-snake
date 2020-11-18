@@ -13,19 +13,19 @@ let comida = {
 }
 
 function criarBG() {
-    context.fillStyle = "lightgreen";
+    context.fillStyle = "white";
     context.fillRect(0, 0, 16 * box, 16 * box);
 }
 
 function criarCobra() {
     for (i = 0; i < snake.length; i++) {
-        context.fillStyle = "green";
+        context.fillStyle = "black";
         context.fillRect(snake[i].x, snake[i].y, box, box);
     }
 }
 
 function criarComida() {
-    context.fillStyle = "red";
+    context.fillStyle = "black";
     context.fillRect(comida.x, comida.y, box, box);
 }
 
@@ -80,4 +80,4 @@ function iniciarJogo () {
     snake.unshift(newHead);
 }
 
-let jogo = setInterval(iniciarJogo, 190); 
+let jogo = setInterval(iniciarJogo, 120); 
