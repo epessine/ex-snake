@@ -39,10 +39,17 @@ function update(event) {
 }
 
 function iniciarJogo () {
-    if(snake[0].x > 15 * box && direction == "right") snake[0].x = 0 * box;
-    if(snake[0].x < 0 && direction == "left") snake[0].x = 15 * box;
-    if(snake[0].y > 15 * box && direction == "down") snake[0].y = 0 * box;
-    if(snake[0].y < 0 && direction == "up") snake[0].y = 15 * box;
+    if(snake[0].x > 15 * box) snake[0].x = 0 * box;
+    if(snake[0].x < 0) snake[0].x = 15 * box;
+    if(snake[0].y > 15 * box) snake[0].y = 0 * box;
+    if(snake[0].y < 0) snake[0].y = 15 * box;
+
+    for (i = 1; i < snake.length; i++) {
+        if (snake[0].x == snake[i].x && snake[0].y == snake[i].y) {
+            clearInterval(jogo);
+            alert("Perdeu!");
+        }
+    }
 
     criarBG();
     criarCobra();
@@ -73,4 +80,4 @@ function iniciarJogo () {
     snake.unshift(newHead);
 }
 
-let jogo = setInterval(iniciarJogo, 250); 
+let jogo = setInterval(iniciarJogo, 190); 
