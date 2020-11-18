@@ -38,7 +38,9 @@ function update(event) {
     if(event.keyCode == 40 && direction != "up") direction = "down";      
 }
 
-function iniciarJogo () {
+function iniciarJogo() {
+    document.querySelector(".popup").style.visibility = "hidden";
+
     if(snake[0].x > 15 * box) snake[0].x = 0 * box;
     if(snake[0].x < 0) snake[0].x = 15 * box;
     if(snake[0].y > 15 * box) snake[0].y = 0 * box;
@@ -47,7 +49,7 @@ function iniciarJogo () {
     for (i = 1; i < snake.length; i++) {
         if (snake[0].x == snake[i].x && snake[0].y == snake[i].y) {
             clearInterval(jogo);
-            alert("Perdeu!");
+            document.querySelector(".popup").style.visibility = "visible";
         }
     }
 
@@ -80,4 +82,19 @@ function iniciarJogo () {
     snake.unshift(newHead);
 }
 
-let jogo = setInterval(iniciarJogo, 120); 
+function reiniciar() {
+    snake = [];
+    snake[0] = {
+        x: 8 * box,
+        y: 8 * box
+    }
+    direction = "right";
+    comida = {
+        x: Math.floor(Math.random() * 16) * box,
+        y: Math.floor(Math.random() * 16) * box
+    }
+    iniciarJogo();
+    jogo = setInterval(iniciarJogo, 120);
+}
+
+let jogo = setInterval(iniciarJogo, 120);
