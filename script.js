@@ -39,10 +39,10 @@ function update(event) {
 }
 
 function iniciarJogo () {
-    if(snake[0].x > 15 * box && direction == "right") snake[0].x = -1 * box;
-    if(snake[0].x < 0 && direction == "left") snake[0].x = 16 * box;
-    if(snake[0].y > 15 * box && direction == "down") snake[0].y = -1 * box;
-    if(snake[0].y < 0 && direction == "up") snake[0].y = 16 * box;
+    if(snake[0].x > 15 * box && direction == "right") snake[0].x = 0 * box;
+    if(snake[0].x < 0 && direction == "left") snake[0].x = 15 * box;
+    if(snake[0].y > 15 * box && direction == "down") snake[0].y = 0 * box;
+    if(snake[0].y < 0 && direction == "up") snake[0].y = 15 * box;
 
     criarBG();
     criarCobra();
@@ -56,7 +56,14 @@ function iniciarJogo () {
     if (direction == "up") snakeY -= box;
     if (direction == "down") snakeY += box;
 
-    snake.pop();
+    if (snakeX != comida.x || snakeY != comida.y) {
+        snake.pop();
+    } else {
+        comida.x = Math.floor(Math.random() * 16) * box;
+        comida.y = Math.floor(Math.random() * 16) * box;
+    }
+
+    
 
     let newHead = {
         x: snakeX,
