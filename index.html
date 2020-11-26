@@ -14,11 +14,15 @@
         <canvas id="snake" width="512" height="512"></canvas>
         <div class="popup">
             <span>Você perdeu!</span>
-            <button class="restart" onclick="reiniciar()">Reiniciar</button>
+            <button class="restart" onclick="reiniciar('slow')">Slow Mode</button>
+            <button class="restart" onclick="reiniciar('normal')">Normal Mode</button>
+            <button class="restart" onclick="reiniciar('fast')">Fast Mode</button>
         </div>
         <div class="popup2">
             <span>Snake Game by Eduardo Pessine</span>
-            <button class="restart" onclick="reiniciar()">Iniciar</button>
+            <button class="restart" onclick="reiniciar('slow')">Slow Mode</button>
+            <button class="restart" onclick="reiniciar('normal')">Normal Mode</button>
+            <button class="restart" onclick="reiniciar('fast')">Fast Mode</button>
         </div>
     </div>
 </body>

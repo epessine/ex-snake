@@ -84,7 +84,7 @@ function iniciarJogo() {
     snake.unshift(newHead);
 }
 
-function reiniciar() {
+function reiniciar(modo) {
     snake = [];
     snake[0] = {
         x: 8 * box,
@@ -96,6 +96,15 @@ function reiniciar() {
         y: Math.floor(Math.random() * 16) * box
     }
     iniciarJogo();
-    speed = 100;
-    jogo = setInterval(iniciarJogo, speed);
+    if (modo === 'fast') {
+        speed = 50;
+        jogo = setInterval(iniciarJogo, speed);
+    } else if (modo === 'normal') {
+        speed = 100;
+        jogo = setInterval(iniciarJogo, speed);
+    } else if (modo === 'slow') {
+        speed = 150;
+        jogo = setInterval(iniciarJogo, speed);
+    }
+    
 }

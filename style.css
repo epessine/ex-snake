@@ -34,7 +34,7 @@ canvas {
     font-weight: bold;
     background-color: white;
     border: 4px solid black;
-    height: 20%;
+    height: 50%;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -52,7 +52,7 @@ canvas {
     font-weight: bold;
     background-color: white;
     border: 4px solid black;
-    height: 20%;
+    height: 50%;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -81,8 +81,8 @@ canvas {
 
 @media only screen and (orientation: landscape) {
     .game-container {
-        height: 60%;
-        width: 38%;
+        height: 100%;
+        width: 48%;
     }
     canvas {
         width: 80%;
@@ -96,5 +96,11 @@ canvas {
     }
     canvas {
         width: 80%;
+    }
+    .popup2 {
+        height: 30%;
+    }
+    .popup {
+        height: 30%;
     }
 }
