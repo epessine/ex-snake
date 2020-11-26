@@ -83,8 +83,8 @@ canvas {
 
 @media only screen and (orientation: landscape) {
     .game-container {
-        height: 80%;
-        width: 50%;
+        height: 60%;
+        width: 38%;
     }
     canvas {
         width: 80%;
