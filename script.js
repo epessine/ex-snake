@@ -2,6 +2,7 @@ let canvas = document.getElementById("snake");
 let context = canvas.getContext("2d");
 let box = 32;
 let snake = [];
+let speed = 0;
 snake[0] = {
     x: 8 * box,
     y: 8 * box
@@ -95,5 +96,6 @@ function reiniciar() {
         y: Math.floor(Math.random() * 16) * box
     }
     iniciarJogo();
-    jogo = setInterval(iniciarJogo, 120);
+    speed = 100;
+    jogo = setInterval(iniciarJogo, speed);
 }

@@ -2,6 +2,7 @@ body {
     display: flex;
     align-content: center;
     justify-content: center;
+    font-family: 'VT323'
 }
 
 .game-container {
@@ -15,7 +16,6 @@ body {
 
 
 h1 {
-    font-family: 'Courier New', Courier, monospace;
     font-size: 20pt;
     font-weight: bold;
 }
@@ -27,16 +27,15 @@ canvas {
 
 .popup {
     z-index: 3;
-    position: relative;
+    position: absolute;
     left: center;
     top: center;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 15pt;
+    font-size: 20pt;
     font-weight: bold;
     background-color: white;
     border: 4px solid black;
-    height: 20vh;
-    width: 20vw;
+    height: 20%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,13 +48,12 @@ canvas {
     position: absolute;
     left: center;
     top: center;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 15pt;
+    font-size: 20pt;
     font-weight: bold;
     background-color: white;
     border: 4px solid black;
-    height: 20vh;
-    width: 20vw;
+    height: 20%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,9 +66,9 @@ canvas {
 
 .restart {
     border: 4px solid black;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 13pt;
-    margin-top: 5%;
+    font-family: 'VT323';
+    font-size: 16pt;
+    margin-top: 2%;
     padding: 1%;
     font-weight: bold;
 }
