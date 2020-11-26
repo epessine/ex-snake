@@ -40,6 +40,7 @@ function update(event) {
 
 function iniciarJogo() {
     document.querySelector(".popup").style.visibility = "hidden";
+    document.querySelector(".popup2").style.visibility = "hidden";
 
     if(snake[0].x > 15 * box) snake[0].x = 0 * box;
     if(snake[0].x < 0) snake[0].x = 15 * box;
@@ -96,5 +97,3 @@ function reiniciar() {
     iniciarJogo();
     jogo = setInterval(iniciarJogo, 120);
 }
-
-let jogo = setInterval(iniciarJogo, 120);
